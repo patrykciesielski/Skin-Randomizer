@@ -1,0 +1,29 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: grey;
+}
+
+.back{
+    position: fixed;
+    left: 15px;
+    top: 15px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    cursor: pointer;
+    transition: .7s;
+}
+
+.back a{
+    text-decoration: none;
+    color: black;
+}
+
+.back a:hover{
+    color: white;
+    text-decoration: none;
+}
