@@ -1,6 +1,7 @@
 body{
     margin: 0;
     padding: 0;
+    overflow: hidden;
 }
 
 .container{
@@ -17,19 +18,24 @@ body{
     to{background-position: 300px;}
 }
 
-
 .random{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.random a{
     position: fixed;
-    left: 50%;
-    transform: translateX(-50%);
     top: 45px;
-    font-size: 60px;
+    font-size: 42px;
     font-weight: 700;
-    letter-spacing: 10px;
+    letter-spacing: 6px;
     color: darkslateblue;
     border: none;
     cursor: pointer;
     text-shadow: 3px 3px 6px rgba(0, 0, 0, .55);
+    text-decoration: none;
     text-transform: uppercase;
     transition: 1s;
 }
@@ -69,11 +75,25 @@ body{
     justify-content: left;
     cursor: default;
     transition: 1.5s;
+    position: relative;
 }
 
 .active.sidebar{
     visibility: hidden;
     transform: translateX(-100%);
+}
+
+.sidebarhide{
+    position: absolute;
+    top: 7px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: .7s;
+}
+
+.sidebarhide:hover{
+    color: #fff;
 }
 
 .sidebar ul{
@@ -105,30 +125,58 @@ body{
     border-radius: 0 10px 0 0;
 }
 
-.functext{
-    position: absolute;
-    top: 10px;
-    width: 255px;
-    height: 315px;
-    border-left: 1px solid #000;
-    border-bottom: 1px solid #000;
+.sidebarcontent div{
     display: flex;
-    text-align: left;
-    align-items: center;
-    font-size: 20px;
-    opacity: 1;
-    transition: .8s;
-    cursor: default;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 375px;
+    width: 700px;
+    height: 500px;
     background-color: #434443;
+    transition: .8s;
+    border-radius: 3px;
+    border-top: 5px solid #656665;
+    border-right: 5px solid #656665;
+    color: #ccc;
+    font-size: 30px;
+    text-align: center;
+    align-items: center;
+    padding: 22px;
+    cursor: default;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, .66);
+}
+
+.sidebarcontent div:hover{
+    border-radius: 20px;
 }
 
 .active.functext{
     opacity: 0;
+    visibility: hidden;
 }
 
-.functext:hover{
-    background-color: #656665;
-    border-radius: 0 0 0 10px;
+.active.abouttext{
+    opacity: 0;
+    visibility: hidden;
+}
+
+.active.contacttext{
+    opacity: 0;
+    visibility: hidden;
+}
+
+.champions{
+    width: 100%;
+    height: 100%;
+    transition: 2s;
+    margin-left: -403px;
+}
+
+.active.champions{
+    transform: translateY(-80%);
+    opacity: 0;
+    visibility: hidden;
 }
 
 .pyke a{
@@ -151,7 +199,7 @@ body{
 
 .senna a{
     position: absolute;
-    background-image: url(img/senna.jpg);
+    background-image: url("img/senna.jpg");
     width: 300px;
     height: 660px;
     top: 200px;
