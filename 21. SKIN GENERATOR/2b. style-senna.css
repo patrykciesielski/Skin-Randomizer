@@ -1,7 +1,7 @@
 body{
     margin: 0;
     padding: 0;
-    background-color: grey;
+    background-color: #525050;
     overflow: hidden;
 }
 
@@ -118,6 +118,7 @@ body{
 .random-btn:hover{
     font-size: 27px;
     border-radius: 0;
+    background-color: #525050;
 }
 
 .return{

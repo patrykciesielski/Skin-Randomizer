@@ -5,7 +5,7 @@ const allImgEl = document.querySelectorAll("img");
 const imgContEl = document.querySelector(".img-container");
 const randomBtnEl = document.querySelector(".random-btn");
 const returnEl = document.querySelector(".return");
-const gradientEl = document.querySelector(".gradient");
+const rollEl = document.querySelector(".roll");
 const resultEl = document.querySelector(".result");
 
 let currentImg = 1
@@ -28,6 +28,7 @@ randomBtnEl.addEventListener("click", () => {
     returnEl.classList.remove("active");
     randomBtnEl.classList.add("active");
     resultEl.classList.remove("active");
+    rollEl.classList.remove("active");
 });
 
 returnEl.addEventListener("click", () => {
@@ -35,6 +36,7 @@ returnEl.addEventListener("click", () => {
     returnEl.classList.add("active");
     randomBtnEl.classList.remove("active");
     resultEl.classList.add("active");
+    rollEl.classList.add("active");
 })
 
 updateImg();
@@ -146,20 +148,23 @@ const pykeSkin = [
   ];
 
 randomBtnEl.addEventListener("click", randomChroma());
-  
-  function randomChroma(){
-    const pykeAllSkins = pykeSkin[Math.floor(Math.random() * 8)].skin;
+
+function randomChroma(){
+    const pykeAllSkins = pykeSkin[Math.floor(Math.random() * pykeSkin.length)].skin;
     const resultEl = document.querySelector(".result");
     const chromaEl = document.querySelector(".pyke-chroma");
     
     if (pykeAllSkins.includes("Classic")) {
-      const pykeClassicResult = "Your skin is " + pykeAllSkins + " !";
+      const pykeClassicResult = "Your skin is " + pykeAllSkins + "!";
         resultEl.style.backgroundImage = "url('img/pyke_skins/classic.jpg')";
+        resultEl.style.boxShadow = "0 0 45px 60px rgba(39, 95, 82, .33)";
         chromaEl.innerHTML = pykeClassicResult;
       
     }else if (pykeAllSkins.includes("Sand")){
       const pykeSandChroma = pykeSkin[1].chroma[Math.floor(Math.random() * 8)];
       resultEl.style.backgroundImage = "url('img/pyke_skins/sand.jpg')";
+      resultEl.style.boxShadow = "0 0 45px 60px rgba(159, 122, 85, .33)";
+
       if(pykeSandChroma.includes("default")){
         const pykeSandResult = "Your skin is " + pykeAllSkins + " with classic look!";
         chromaEl.innerHTML = pykeSandResult
@@ -171,6 +176,8 @@ randomBtnEl.addEventListener("click", randomChroma());
     }else if (pykeAllSkins.includes("Blood")){
       const pykeBloodChroma = pykeSkin[2].chroma[Math.floor(Math.random() * 7)];
       resultEl.style.backgroundImage = "url('img/pyke_skins/blood.jpg')";
+      resultEl.style.boxShadow = "0 0 45px 60px rgba(51, 56, 69, .33)";
+
       if(pykeBloodChroma.includes("default")){
         const pykeBloodResult = "Your skin is " + pykeAllSkins + " with classic look!";
         chromaEl.innerHTML = pykeBloodResult
@@ -182,6 +189,7 @@ randomBtnEl.addEventListener("click", randomChroma());
     }else if (pykeAllSkins.includes("Project")){
       const pykeProjectChroma = pykeSkin[3].chroma[Math.floor(Math.random() * 9)];
       resultEl.style.backgroundImage = "url('img/pyke_skins/project.jpg')";
+      resultEl.style.boxShadow = "0 0 45px 60px rgba(79, 63, 125, .33)";
 
       if(pykeProjectChroma.includes("default")){
         const pykeProjectResult = "Your skin is " + pykeAllSkins + " with classic look!";
@@ -194,6 +202,7 @@ randomBtnEl.addEventListener("click", randomChroma());
     }else if (pykeAllSkins.includes("Psy")){
       const pykePsyChroma = pykeSkin[4].chroma[Math.floor(Math.random() * 9)];
       resultEl.style.backgroundImage = "url('img/pyke_skins/psyops.jpg')";
+      resultEl.style.boxShadow = "0 0 45px 60px rgba(33, 62, 129, .33)";
 
       if(pykePsyChroma.includes("default")){
         const pykePsyResult = "Your skin is " + pykeAllSkins + " with classic look!";
@@ -206,6 +215,7 @@ randomBtnEl.addEventListener("click", randomChroma());
     }else if (pykeAllSkins.includes("Sentinel")){
       const pykeSentinelChroma = pykeSkin[5].chroma[Math.floor(Math.random() * 10)];
       resultEl.style.backgroundImage = "url('img/pyke_skins/sentinel.jpg')";
+      resultEl.style.boxShadow = "0 0 45px 60px rgba(38, 57, 65, .33)";
 
       if(pykeSentinelChroma.includes("default")){
         const pykeSentinelResult = "Your skin is " + pykeAllSkins + " with classic look!";
@@ -218,6 +228,7 @@ randomBtnEl.addEventListener("click", randomChroma());
     }else if (pykeAllSkins.includes("Ashen")){
       const pykeAshenChroma = pykeSkin[6].chroma[Math.floor(Math.random() * 2)];
       resultEl.style.backgroundImage = "url('img/pyke_skins/ashen.jpg')";
+      resultEl.style.boxShadow = "0 0 45px 60px rgba(151, 152, 206, .33)";
 
       if(pykeAshenChroma.includes("default")){
         const pykeAshenResult = "Your skin is " + pykeAllSkins + " with classic look!";
@@ -230,6 +241,7 @@ randomBtnEl.addEventListener("click", randomChroma());
     }else if (pykeAllSkins.includes("Empy")){
       const pykeEmpyChroma = pykeSkin[7].chroma[Math.floor(Math.random() * 7)];
       resultEl.style.backgroundImage = "url('img/pyke_skins/empyrean.jpg')";
+      resultEl.style.boxShadow = "0 0 45px 60px rgba(254, 246, 167, .33)";
 
       if(pykeEmpyChroma.includes("default")){
         const pykeEmpyResult = "Your skin is " + pykeAllSkins + " with classic look!";
@@ -240,4 +252,5 @@ randomBtnEl.addEventListener("click", randomChroma());
       };
     };
   };
+
   

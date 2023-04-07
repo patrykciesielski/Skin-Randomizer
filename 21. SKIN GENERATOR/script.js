@@ -20,6 +20,8 @@ sidebarhideEl.addEventListener("click", () => {
     sidebarEl.classList.add("active");
     championsEl.classList.remove("active");
     functextEl.classList.add("active");
+    abouttextEl.classList.add("active");
+    contacttextEl.classList.add("active");
 });
 
 funcEl.addEventListener("click", () => {

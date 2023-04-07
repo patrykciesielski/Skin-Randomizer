@@ -47,13 +47,15 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 35px;
+    font-size: 40px;
     cursor: default;
     transition: .7s;
 }
 
 .result div:hover{
-    filter: brightness(1.35);
+    filter: brightness(1.22);
+    font-size: 45px;
+    letter-spacing: 4px;
 }
 
 .result-champion{
