@@ -1,44 +1,27 @@
-/* MAIN PAGE #################################################### */
-
-const barsEl = document.querySelector(".bars");
-const sidebarEl = document.querySelector(".sidebar");
-const funcEl = document.getElementById("func");
-const aboutEl = document.getElementById("about");
-const contactEl = document.getElementById("contact");
-const functextEl = document.querySelector(".functext");
-const abouttextEl = document.querySelector(".abouttext");
-const contacttextEl = document.querySelector(".contacttext");
-const sidebarhideEl = document.querySelector(".sidebarhide");
-const championsEl = document.querySelector(".champions");
-
-barsEl.addEventListener("click", () => {
-    sidebarEl.classList.toggle("active");
-    championsEl.classList.toggle("active");
+document.getElementById("pyke").addEventListener("click", function(){
+    location.href = "1a. pyke.html"
 });
-
-sidebarhideEl.addEventListener("click", () => {
-    sidebarEl.classList.add("active");
-    championsEl.classList.remove("active");
-    functextEl.classList.add("active");
-    abouttextEl.classList.add("active");
-    contacttextEl.classList.add("active");
+document.getElementById("senna").addEventListener("click", function(){
+    location.href = "2a. senna.html"
 });
-
-funcEl.addEventListener("click", () => {
-    functextEl.classList.toggle("active");
-    abouttextEl.classList.add("active");
-    contacttextEl.classList.add("active");
+document.getElementById("swain").addEventListener("click", function(){
+    location.href = "3a. swain.html"
 });
-
-aboutEl.addEventListener("click", () => {
-    abouttextEl.classList.toggle("active");
-    functextEl.classList.add("active");
-    contacttextEl.classList.add("active");
+document.getElementById("thresh").addEventListener("click", function(){
+    location.href = "4a. thresh.html"
 });
-
-contactEl.addEventListener("click", () => {
-    contacttextEl.classList.toggle("active");
-    functextEl.classList.add("active");
-    abouttextEl.classList.add("active");
+document.getElementById("random").addEventListener("click", function(){
+    location.href = "0a. random.html"
 });
-
+document.getElementById("rakan").addEventListener("click", function(){
+    location.href = "5a. rakan.html"
+});
+document.getElementById("sera").addEventListener("click", function(){
+    location.href = "6a. seraphine.html"
+});
+document.getElementById("galio").addEventListener("click", function(){
+    location.href = "7a. galio.html"
+});
+document.getElementById("nautilus").addEventListener("click", function(){
+    location.href = "8a. nautilus.html"
+});

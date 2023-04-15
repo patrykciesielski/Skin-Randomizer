@@ -5,7 +5,6 @@ const allImgEl = document.querySelectorAll("img");
 const imgContEl = document.querySelector(".img-container");
 const randomBtnEl = document.querySelector(".random-btn");
 const returnEl = document.querySelector(".return");
-const gradientEl = document.querySelector(".gradient");
 const resultEl = document.querySelector(".result");
 
 let currentImg = 1
@@ -117,7 +116,7 @@ const seraSkin = [
 randomBtnEl.addEventListener("click", randomChroma());
   
 function randomChroma(){
-    const seraAllSkins = seraSkin[Math.floor(Math.random() * 8)].skin;
+    const seraAllSkins = seraSkin[Math.floor(Math.random() * seraSkin.length)].skin;
     const resultEl = document.querySelector(".result");
     const chromaEl = document.querySelector(".sera-chroma");
     
