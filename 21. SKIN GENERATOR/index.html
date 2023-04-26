@@ -6,19 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Skin Randomizer</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <div class="container">
-        <ul>
+            <i class="fa-solid fa-bars"></i>
+        <ul class="champions">
             <li id="pyke"></li>
             <li id="senna"></li>
             <li id="swain"></li>
             <li id="thresh"></li>
-            <li id="random">RANDOM</li>
+            <li id="random"></li>
             <li id="rakan"></li>
             <li id="sera"></li>
             <li id="galio"></li>
             <li id="nautilus"></li>
+        </ul>
+    </div>
+    <div class="sidebar active">
+        <i class="fa-solid fa-arrow-left"></i>
+        <div class="sidebar-header">
+            <div id="logo">SKIN RANDOMIZER</div>
+        </div>
+        <ul class="menu">
+            <li id="func">Functionality</li>
+            <li id="about">About</li>
+            <li id="contact">Contact</li>
+            <div class="text active"></div>
         </ul>
     </div>
     <script src="script.js"></script>

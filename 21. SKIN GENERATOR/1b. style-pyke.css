@@ -37,16 +37,17 @@ body{
 }
 
 .img-container{
-    width: 750px;
-    height: 400px;
+    width: 1000px;
+    height: 500px;
     overflow: hidden;
     border-radius: 12px;
     box-shadow: 5px 5px 12px rgba(0, 0, 0, .66);
     position: relative;
-    top: -13%;
+    top: -10%;
     transition: 1.5s;
     border: 3px solid #000;
     cursor: pointer;
+    background-size: cover;
 }
 
 .active.img-container{
@@ -62,7 +63,7 @@ body{
 
 .images{
     display: flex;
-    transition: transform .99s ease-in-out;
+    transition: transform 1.4s ease-in-out;
 }
 
 .images img{
@@ -99,7 +100,7 @@ body{
     position: fixed;
     left: 50%;
     transform: translateX(-50%);
-    top: 62%;
+    top: 70%;
     border: 2px solid #000;
     border-radius: 12px;
     box-shadow: 3px 3px 7px rgba(0, 0, 0, .44);
@@ -146,33 +147,7 @@ body{
 .return:hover{
     font-size: 27px;
     border-radius: 0;
-}
-
-.roll{
-    height: 60px;
-    width: 200px;
-    position: fixed;
-    left: 72%;
-    top: 75%;
-    border: 2px solid #000;
-    border-radius: 12px;
-    box-shadow: 3px 3px 7px rgba(0, 0, 0, .44);
-    transition: 1.5s;
-    font-size: 25px;
-    background-color: grey;
-    cursor: pointer;
-    z-index: 1;
-}
-
-.active.roll{
-    transform: translateX(170%);
-    visibility: hidden;
-    opacity: 0;
-}
-
-.roll:hover{
-    font-size: 27px;
-    border-radius: 0;
+    background-color: #525050;
 }
 
 .result{
@@ -184,7 +159,7 @@ body{
     align-items: center;
     top: 14%;
     left: 16%;
-    transition: 2s;
+    transition: 1.75s;
     border-radius: 10px;
     border: 3px solid #000;
     box-shadow: 6px 6px 14px rgba(0, 0, 0, .44);
